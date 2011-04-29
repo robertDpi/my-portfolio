@@ -1,9 +1,9 @@
 class CreateProjects < ActiveRecord::Migration
   def self.up
     create_table :projects do |t|
-      t.string "Title", :null => 'false'
-      t.string "Subtitle"
-      t.string "Description"
+      t.string "title", :null => 'false'
+      t.string "subtitle"
+      t.string "description"
       t.timestamps
     end
   end

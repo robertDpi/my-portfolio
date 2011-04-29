@@ -1,0 +1,13 @@
+- error_messages_for(@project)
+
+%div.field
+  = form.label :title
+  = form.text_field :title
+
+%div.field
+  %dt= form.label :subtitle
+  %dd= form.text_field :subtitle
+
+%div.field
+  %dt= form.label :description
+  %dd= form.text_area :description
