@@ -1,4 +1,8 @@
 PortfolioWebsite::Application.routes.draw do
+  # Contact
+  get 'contact', :to => "contact#new"
+  post 'contact_mail', :to => "contact#contact_mail"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

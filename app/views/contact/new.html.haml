@@ -1,0 +1,15 @@
+%h1= "Contact"
+
+= error_messages_for(@contact)
+
+= form_for @contact, :url => contact_mail_path do |form|
+  %div.field
+    = form.label :name
+    = form.text_field :name
+  %div.field
+    = form.label :email
+    = form.text_field :email
+  %div.field
+    = form.label :body
+    = form.text_area :body
+  = form.submit
