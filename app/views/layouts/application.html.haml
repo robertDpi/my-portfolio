@@ -11,9 +11,11 @@
       %h1= 'Portfolio Site'
 
     %div#content
-
-
+      - if !flash[:notice].blank?
+        %div.notice
+          = flash[:notice]
 
       = yield
 
     %div#footer
+      
