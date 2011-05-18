@@ -1,3 +1,3 @@
 class Project < ActiveRecord::Base
- validates_presence_of :title
+  validates :title, :presence => true, :length => { :maximum => 50 }
 end

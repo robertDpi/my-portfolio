@@ -3,12 +3,16 @@
   %head
     %title= yield(:title) || "A Portfolio Website"
     = stylesheet_link_tag "application"
-    = javascript_include_tag "portfolio"
+    - # = javascript_include_tag "portfolio"
     = csrf_meta_tag
 
   %body{:class => @bodyclass}
     %div#sidebar
-      %h1= 'Portfolio Site'
+      %h1= 'Your Portfolio Site'
+      %ul#navigation
+        %li= link_to_unless_current("About me")
+        %li= link_to_unless_current("Portfolio", { :controller => "projects", :action => "list" })
+        %li= link_to_unless_current("Contact", { :controller => "contact", :action => "new" })
 
     %div#content
       - if !flash[:notice].blank?
