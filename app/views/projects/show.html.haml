@@ -1,7 +1,6 @@
-- @page_title = 'Project details'
+= page_heading(@project.title)
+
+%h3= @project.subtitle
+%p= @project.description
 
 = link_to("<< Back to List", {:action => 'list'}, :class => 'back-link')
-
-%h1= @project.title
-%h2= @project.subtitle
-%p= @project.description
