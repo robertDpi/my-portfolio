@@ -4,6 +4,7 @@
 
 %h2= 'New Project'
 
-= form_for(:project, :url => {:action => 'create'}) do |form|
+= form_for(:project, :html => { :multipart => true }, :url => {:action => 'create'}) do |form|
   = render(:partial => "form", :locals => {:form => form})
   = submit_tag("Create project")
+

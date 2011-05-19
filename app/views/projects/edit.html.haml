@@ -1,6 +1,6 @@
 = page_heading("Edit project: " + @project.title)
 
-= form_for(:project, :url => {:action => 'update', :id => @project.id}) do |form|
+= form_for(:project, :html => { :multipart => true }, :url => {:action => 'update', :id => @project.id}) do |form|
   = render(:partial => "form", :locals => {:form => form})
   = submit_tag("Update Project")
 
