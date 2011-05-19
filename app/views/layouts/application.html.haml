@@ -1,7 +1,7 @@
 !!!
 %html{'xmlns' => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en'}
   %head
-    %title= yield(:title) || "A Portfolio Website"
+    %title= yield(:title) || "Your Portfolio Website"
     = stylesheet_link_tag "application"
     - # = javascript_include_tag "portfolio"
     = csrf_meta_tag
@@ -10,7 +10,7 @@
     %div#sidebar
       %h1= 'Your Portfolio Site'
       %ul#navigation
-        %li= link_to_unless_current("About me")
+        %li= link_to_unless_current("About you", { :controller => "pages", :action => "about" })
         %li= link_to_unless_current("Portfolio", { :controller => "projects", :action => "list" })
         %li= link_to_unless_current("Contact", { :controller => "contact", :action => "new" })
 

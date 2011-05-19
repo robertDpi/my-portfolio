@@ -1,4 +1,7 @@
 PortfolioWebsite::Application.routes.draw do
+  # About
+  get "about", :to => "pages#about"
+
   # Contact
   get 'contact', :to => "contact#new"
   post 'contact_mail', :to => "contact#contact_mail"
