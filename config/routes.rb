@@ -1,4 +1,6 @@
 PortfolioWebsite::Application.routes.draw do
+  devise_for :users
+
   # About
   get "about", :to => "pages#about"
 
@@ -18,7 +20,7 @@ PortfolioWebsite::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  # resources :projects
+  resources :projects
 
   # Sample resource route with options:
   #   resources :products do

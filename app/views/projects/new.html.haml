@@ -1,10 +1,10 @@
 = page_heading("Create a new project")
 
-= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link')
-
 %h2= 'New Project'
 
 = form_for(:project, :html => { :multipart => true }, :url => {:action => 'create'}) do |form|
   = render(:partial => "form", :locals => {:form => form})
   = submit_tag("Create project")
+
+- link_to("<< Back to List", projects_path, :class => 'back-link')
 

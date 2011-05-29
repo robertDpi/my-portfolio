@@ -7,4 +7,4 @@
 = image_tag @project.cover.url(:medium)
 = image_tag @project.cover.url(:thumb)
 
-= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link')
+= link_to("<< Back to List", projects_path, :class => 'back-link')

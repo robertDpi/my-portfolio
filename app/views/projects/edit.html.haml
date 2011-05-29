@@ -1,7 +1,7 @@
 = page_heading("Edit project: " + @project.title)
 
-= form_for(:project, :html => { :multipart => true }, :url => {:action => 'update', :id => @project.id}) do |form|
+= form_for(@project, :html => { :multipart => true }) do |form|
   = render(:partial => "form", :locals => {:form => form})
   = submit_tag("Update Project")
 
-- link_to("<< Back to List", {:action => 'list'}, :class => 'back-link')
+- link_to("<< Back to List", projects_path, :class => 'back-link')

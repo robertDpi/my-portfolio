@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
 
   before_filter :get_project, :only => [:show, :edit, :update, :delete, :destroy]
+  before_filter :authenticate_user!, :except => [:index, :list, :show]
+  
 
   def index
     list
@@ -8,7 +10,6 @@ class ProjectsController < ApplicationController
   end
 
   def get_project
-    # This will load with the before filter, so it is common to many methods
     @project = Project.find(params[:id])
   end
 

@@ -6,9 +6,11 @@
       %h3= "#{project.title}"
       %h4= "#{project.subtitle}"
       %p.testimonial= project.description
-      %ul.actions
-        %li= link_to("Show", {:action => 'show', :id => project.id}, :class => 'show')
-        %li= link_to("Edit", {:action => 'edit', :id => project.id}, :class => 'edit')
-        %li= link_to("Delete", {:action => 'delete', :id => project.id}, :class => 'delete')
+      - if user_signed_in?
+        %ul.actions
+          %li= link_to("Show", project_path(project.id), :class => 'show')
+          %li= link_to("Edit", edit_project_path(project.id), :class => 'edit')
+          %li= link_to("Delete", project_path(project.id), :confirm => 'Sure?', :method => :delete, :class => 'delete')
 
-= link_to("Create a new project", {:action => 'new'}, :class => 'new')
+- if user_signed_in?
+  = link_to("Create a new project", new_project_path, :class => 'new')
