@@ -6,6 +6,15 @@ gem 'haml'
 gem 'paperclip', '~> 2.3'
 gem 'devise'
 
+group :development do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'webrat'
+end
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

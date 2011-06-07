@@ -2,3 +2,5 @@
 
 %p= 'Are you sure you want to permanently delete this project?'
 = link_to('Delete', @project, :method => :delete)
+
+= link_to("<< Back to List", projects_path, :class => 'back-link')
