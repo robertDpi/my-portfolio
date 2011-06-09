@@ -1,6 +1,4 @@
-= page_heading("Create a new project")
-
-%h2= 'New Project'
+- title "Create a new project"
 
 = form_for(:project, :html => { :multipart => true }, :url => {:action => 'create'}) do |form|
   = render(:partial => "form", :locals => {:form => form})

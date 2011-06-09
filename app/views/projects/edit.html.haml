@@ -1,4 +1,4 @@
-= page_heading("Edit project: " + @project.title)
+- title "Edit project: #{@project.title}"
 
 = form_for(@project, :html => { :multipart => true }) do |form|
   = render(:partial => "form", :locals => {:form => form})

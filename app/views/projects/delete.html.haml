@@ -1,4 +1,4 @@
-= page_heading("Delete project: " + @project.title)
+- title "Delete project: #{@project.title}"
 
 %p= 'Are you sure you want to permanently delete this project?'
 = link_to('Delete', @project, :method => :delete)

@@ -1,15 +1,6 @@
 module ApplicationHelper
-  def page_title
-    if (@title)
-      @title + ' - Your portfolio site'
-    else
-      'Your portfolio site'
-    end
-  end
-
-  def page_heading(text)
-    @title = text
-    content_tag(:h2, text)
+  def title(page_title)
+    content_for(:title) { page_title }
   end
   
   def error_messages_for(object)
