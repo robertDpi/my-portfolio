@@ -10,12 +10,6 @@ class Contact
   validates :email, :presence => true, :length => { :maximum => 100 }, :format => EMAIL_REGEX, :confirmation => true
   validates :body, :presence => true
 
-  after_create :deliver_notification
-
-  def deliver_notification
-    Notification.contact_me(self)
-  end
-
   def initialize(attributes = {})
     (attributes || {}).each do |name, value|
       send("#{name}=", value)
