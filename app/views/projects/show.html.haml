@@ -3,8 +3,9 @@
 %h3= @project.subtitle
 %p= @project.description
 
-= image_tag @project.cover.url
-= image_tag @project.cover.url(:medium)
-= image_tag @project.cover.url(:thumb)
+- if @project.cover_file_name != nil
+  = image_tag @project.cover.url
+  = image_tag @project.cover.url(:medium)
+  = image_tag @project.cover.url(:thumb)
 
 = link_to("<< Back to List", projects_path, :class => 'back-link')
