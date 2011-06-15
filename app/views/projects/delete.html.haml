@@ -1,6 +1,7 @@
 - title "Delete project: #{@project.title}"
 
-%p= 'Are you sure you want to permanently delete this project?'
-= link_to('Delete', @project, :method => :delete)
+= form_for(:project, :html => { :multipart => true }, :url => project_path(@project)) do
+  %p= 'Are you sure you want to permanently delete this project?'
+  = submit_tag("Destroy")
 
 = link_to("<< Back to List", projects_path, :class => 'back-link')

@@ -1,19 +1,11 @@
 class ProjectsController < ApplicationController
 
   before_filter :get_project, :only => [:show, :edit, :update, :delete, :destroy]
-  before_filter :authenticate_user!, :except => [:index, :list, :show]
+  before_filter :authenticate_user!, :except => [:index, :show]
   
+  #TODO: Usar symbols para los nombres de las actions en vez de strings
 
   def index
-    list
-    render('list')
-  end
-
-  def get_project
-    @project = Project.find(params[:id])
-  end
-
-  def list
     @projects = Project.all
   end
 
@@ -21,14 +13,14 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new()
+    @project = Project.new
   end
 
   def create
     @project = Project.new(params[:project])
     if @project.save
       flash[:notice] = "Project created successfully!"
-      redirect_to(:action => 'list')
+      redirect_to projects_path
     else
       flash[:notice] = "Please correct the errors bellow..."
       render('new')
@@ -54,6 +46,14 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     flash[:notice] = "Project permanently removed from the database."
-    redirect_to(:action => 'list')
+    redirect_to projects_path
   end
+
+  private
+
+  # Note: This is good practice if we have only one instance variable.
+  def get_project
+    @project = Project.find(params[:id])
+  end
+  
 end
