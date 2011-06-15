@@ -15,8 +15,9 @@
         %li= link_to_unless_current("Contact", contact_path)
 
     %div#content
-      - if !flash[:notice].blank?
-        %div.notice= flash[:notice]
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+
       %h1= yield(:title)
       = yield
 
