@@ -2,8 +2,6 @@ class ProjectsController < ApplicationController
 
   before_filter :get_project, :only => [:show, :edit, :update, :delete, :destroy]
   before_filter :authenticate_user!, :except => [:index, :show]
-  
-  #TODO: Usar symbols para los nombres de las actions en vez de strings
 
   def index
     @projects = Project.all
@@ -23,7 +21,7 @@ class ProjectsController < ApplicationController
       redirect_to projects_path
     else
       flash[:notice] = "Please correct the errors bellow..."
-      render('new')
+      render :new
     end
   end
 
@@ -33,10 +31,10 @@ class ProjectsController < ApplicationController
   def update
     if @project.update_attributes(params[:project])
       flash[:notice] = "Project updated successfully"
-      redirect_to(:action => 'show', :id => @project.id)
+      redirect_to project_path(@project.id)
     else
       flash[:notice] = "Please correct the errors bellow..."
-      render('edit')
+      render :edit
     end
   end
 
