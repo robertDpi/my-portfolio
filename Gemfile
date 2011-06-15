@@ -16,7 +16,7 @@ group :test do
 end
 
 # Gem needed for image upload with Heroku and AWS
-gem 'aws-s3'
+gem 'aws-s3', :require => 'aws/s3' 
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
