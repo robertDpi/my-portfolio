@@ -15,6 +15,9 @@ group :test do
   gem 'webrat'
 end
 
+# Gem needed for image upload with Heroku and AWS
+gem 'aws-s3'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

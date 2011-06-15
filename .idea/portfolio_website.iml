@@ -12,6 +12,12 @@
   <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
+        <dependency name="aws-s3" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="bundler" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source manual="true" />
@@ -121,6 +127,8 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] diff-lcs (v1.1.2, /home/vero/.rvm/gems/ruby-1.9.2-p180@portfolio/gems/diff-lcs-1.1.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.6.0, /home/vero/.rvm/gems/ruby-1.9.2-p180@portfolio/gems/rspec-2.6.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-expectations (v2.6.0, /home/vero/.rvm/gems/ruby-1.9.2-p180@portfolio/gems/rspec-expectations-2.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] aws-s3 (v0.6.2, /home/vero/.rvm/gems/ruby-1.9.2-p180@portfolio/gems/aws-s3-0.6.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] xml-simple (v1.0.16, /home/vero/.rvm/gems/ruby-1.9.2-p180@portfolio/gems/xml-simple-1.0.16)" level="application" />
   </component>
 </module>
 

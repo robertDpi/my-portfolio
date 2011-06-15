@@ -7,8 +7,14 @@
     = csrf_meta_tag
 
   %body
+    - if user_signed_in?
+      %p#authentication
+        = "Logged in as #{current_user.email}"
+        = link_to "Logout", destroy_user_session_path
+      
     %div#sidebar
-      %h1= 'Your Portfolio Site'
+      %h1
+        = link_to_unless_current("Your portfolio site", root_path)
       %ul#navigation
         %li= link_to_unless_current("About you", about_path)
         %li= link_to_unless_current("Your projects", projects_path)
@@ -21,10 +27,4 @@
       %h1= yield(:title)
       = yield
 
-    - if user_signed_in?
-      %p#authentication
-        = "Logged in as #{current_user.email}"
-        = link_to "Logout", destroy_user_session_path
-
-    %div#footer
       
