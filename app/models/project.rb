@@ -7,5 +7,8 @@ class Project < ActiveRecord::Base
                     },
                     # Settings needed for image upload with Heroku and AWS
                     :storage => :s3,
-                    :bucket => 'portfolio-bucket'
+                    :bucket => ENV['S3_BUCKET'],
+                    :s3_credentials => { :access_key_id     => ENV['S3_KEY'],
+                                         :secret_access_key => ENV['S3_SECRET'] }
+
 end
