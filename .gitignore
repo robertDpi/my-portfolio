@@ -1,4 +1,7 @@
 .bundle
+.idea/portfolio_website.iml
+.idea/workspace.xml
 db/*.sqlite3
 log/*.log
 tmp/**/*
+config/heroku_env.rb
