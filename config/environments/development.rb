@@ -25,5 +25,16 @@ PortfolioWebsite::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   config.paperclip_storage = {}
+
+  # Uncomment these to test S3 from the development environment
+  # Settings needed for image upload with Heroku and AWS
+  #config.paperclip_storage = {
+  #    :storage => :s3,
+  #    :bucket  => ENV['S3_BUCKET'],
+  #    :s3_credentials => {
+  #       :access_key_id     => ENV['S3_KEY'],
+  #       :secret_access_key => ENV['S3_SECRET']
+  #    }
+  #}
 end
 

@@ -1,8 +1,10 @@
 .idea
 .bundle
+config/database.yml
 db/*.sqlite3
 *.log
 tmp/
 *~
+public/system/*
 
 config/heroku_env.rb
