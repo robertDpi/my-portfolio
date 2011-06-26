@@ -1,14 +1,20 @@
 To get the project running
 ---------------------------
 
-In database.yml...
-Enter your own db username and passwords
+Copy the file 'database.yml' and paste it in your 'config' folder
+Then edit it, adding your own db username and password
 
 Run...
 rvm gemset create portfolio
+gem install bundler
 bundle install
 rake db:create portfolio 
 rake db:schema:load
+
+
+To create your first user and start adding projects
+-----------------------------------------------------
+
 
 
 To test S3 from the development environment
