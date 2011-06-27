@@ -8,12 +8,20 @@ Run...
 rvm gemset create portfolio
 gem install bundler
 bundle install
-rake db:create portfolio 
+rake db:create portfolio  //or create the database yourself
 rake db:schema:load
+rails server
 
 
 To create your first user and start adding projects
 -----------------------------------------------------
+Run rake db:seed
+Now you can access the app with the following credentials:
+
+email: admin@example.com
+pass: password
+
+When you first log in to the application it will prompt you to change these credentials. Please do!
 
 
 
