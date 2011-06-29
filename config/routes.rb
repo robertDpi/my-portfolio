@@ -1,7 +1,7 @@
 PortfolioWebsite::Application.routes.draw do
   # Users
-  devise_for :users do
-     get 'login', :to => 'devise/sessions#new'
+  devise_for :users, :controllers => {:passwords => "passwords"} do
+    get 'login', :to => 'devise/sessions#new'
   end
 
   # About
