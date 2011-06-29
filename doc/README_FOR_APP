@@ -1,7 +1,6 @@
 To get the project running
 ---------------------------
-
-Copy the file 'database.yml' and paste it in your 'config' folder
+Copy the file 'database.yml' from the 'doc' folder and paste it in your 'config' folder
 Then edit it, adding your own db username and password
 
 Run...
@@ -21,13 +20,39 @@ Now you can access the app with the following credentials:
 email: admin@example.com
 pass: password
 
-When you first log in to the application it will prompt you to change these credentials. Please do!
+When you first log in to the application please change your password.
 
+
+To configure your GMAIL and S3 settings locally
+------------------------------------------------
+Copy the file 'heroku_env.yml' from the 'doc' folder and paste it in your 'config' folder
+Fill in with your data, don't worry this file is already in .gitignore so it will not be versioned.
+
+
+To host the project on Heroku
+-----------------------------
+Run...
+gem install heroku
+heroku keys:add
+heroku create
+git push heroku master
+
+Rename the project...
+heroku rename portfolio-skell
+
+Run the migrations and seeds...
+heroku rake db:migrate
+heroku rake db:seed
+
+Open it (and remember to change your password)
+heroku open
+
+Configure your GMAIL and S3 settings...
+heroku config:add S3_KEY=yourkey S3_SECRET=yoursecret S3_BUCKET=yourbucket GMAIL_USERNAME=youruser GMAIL_PASSWORD=yourpassword
 
 
 To test S3 from the development environment
------------------------------------------------
-
+--------------------------------------------
 In heroku_env...
 enter tour data.
 Uncomment ... lines

@@ -2,7 +2,6 @@
 %html{'xmlns' => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en'}
   %head
     %title= "Your portfolio site - #{yield(:title)!="" ? yield(:title) : "Show off a little bit!"}"
-
     = stylesheet_link_tag "application"
     -# = javascript_include_tag :all
     = csrf_meta_tag
@@ -11,7 +10,7 @@
     - if user_signed_in?
       %p#authentication
         = "Logged in as #{current_user.username}"
-        = link_to "Reset your password", edit_user_password_path
+        = link_to "Change your password", edit_user_password_path
         = link_to "Logout", destroy_user_session_path
 
     %div#sidebar
