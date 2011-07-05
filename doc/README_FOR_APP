@@ -4,7 +4,7 @@ Copy the file 'database.yml' from the 'doc' folder and paste it in your 'config'
 Then edit it, adding your own db username and password
 
 Run...
-rvm gemset create portfolio
+rvm gemset create
 gem install bundler
 bundle install
 rake db:create portfolio  //or create the database yourself
@@ -12,15 +12,20 @@ rake db:schema:load
 rails server
 
 
-To create your first user and start adding projects
+To login and start adding projects
 -----------------------------------------------------
+Create the first user by running...
+
 Run rake db:seed
-Now you can access the app with the following credentials:
+
+Then type "/login" in you address bar and access the app with the following credentials...
 
 email: admin@example.com
 pass: password
 
 When you first log in to the application please change your password.
+
+Now the "Add new project" link will show up at the homepage.
 
 
 To configure your GMAIL and S3 settings locally
