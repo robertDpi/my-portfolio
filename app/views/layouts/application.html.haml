@@ -1,11 +1,15 @@
-!!!
-%html{'xmlns' => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en'}
+!!! 5
+%html{ :lang => "en"}
   %head
-    %title= "Your portfolio site - #{yield(:title)!="" ? yield(:title) : "Show off a little bit!"}"
+    %title= "Vero Rebagliatte - #{yield(:title)!="" ? yield(:title) : "My portfolio site"}"
+    %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1; charset=utf-8"}
+    %meta{ :content => "Online Portfolio of Vero Rebagliatte", :name => "description" }
+    %meta{ :content => "Vero Rebagliatte", :name => "author" }
     = stylesheet_link_tag "application"
+    = javascript_include_tag "modernizr-1.7.min"
+    = favicon_link_tag
     -# = javascript_include_tag :all
     = csrf_meta_tag
-
   %body
     - if user_signed_in?
       %p#authentication
@@ -13,19 +17,23 @@
         = link_to "Change your password", edit_user_password_path
         = link_to "Logout", destroy_user_session_path
 
-    %div#sidebar
-      %h1
-        = link_to_unless_current("Your portfolio site", root_path)
-      %ul#navigation
-        %li= link_to_unless_current("About you", about_path)
-        %li= link_to_unless_current("Your projects", projects_path)
-        %li= link_to_unless_current("Contact", contact_path)
+    %div.sidebar
+      %header
+        %h1= link_to_unless_current("Vero Rebagliatte", root_path)
+        %h2= "UI Designer & Developer"
+      %nav
+        %h1.hidden= "Main navigation"
+        %ul
+          %li= link_to_unless_current("Portfolio", projects_path)
+          %li= link_to_unless_current("About me", about_path)
+          %li= link_to_unless_current("Contact", contact_path)
 
-    %div#content
+    %section#content
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
 
       %h1= yield(:title)
       = yield
 
-      
+    %footer
+      %p= "Vero Rebagliatte"

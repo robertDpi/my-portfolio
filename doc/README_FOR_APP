@@ -7,7 +7,7 @@ Run...
 rvm gemset create
 gem install bundler
 bundle install
-rake db:create portfolio  //or create the database yourself
+rake db:create
 rake db:schema:load
 rails server
 
@@ -20,8 +20,8 @@ Run rake db:seed
 
 Then type "/login" in you address bar and access the app with the following credentials...
 
-email: admin@example.com
-pass: password
+username: admin
+password: password
 
 When you first log in to the application please change your password.
 
