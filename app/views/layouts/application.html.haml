@@ -24,7 +24,11 @@
       %nav
         %h1.hidden= "Main navigation"
         %ul
-          %li= link_to_unless_current("Portfolio", projects_path)
+          %li
+            = link_to_unless_current("Portfolio", projects_path)
+            %ul
+              - @project_list.each do |project|
+                %li= link_to(project.title, project_path(project.id), :class => 'show')
           %li= link_to_unless_current("About me", about_path)
           %li= link_to_unless_current("Contact", contact_path)
 
