@@ -1,6 +1,77 @@
-- title "About you"
+- title "Get to know me!"
 
-%p= "Place info about you here."
-%p= "This template is under app/views/pages/about.html.erb"
+%p= "Hi there. My name is Verónica Rebagliatte. I am a UI designer and developer."
+%p= "It is my belief that our profession is something that defines us; and I am deeply committed to make the web a more usable and accessible place for everyone."
+%p= "I pride myself on being an easy to work with, friendly person and a restless learner. And yes... I am a full-time geek!"
 
+%section
+  %h1= "Skills"
+  %ul
+    %li
+      = "Areas of expertise"
+      %ul
+        %li= "User experience"
+        %li= "Usability"
+        %li= "Information Architecture"
+        %li= "Interaction Design"
+        %li= "SEO"
+    %li
+      = "Wireframing software"
+      %ul
+        %li= "Axure RP Pro"
+        %li= "Balsamiq mockups"
+    %li
+      = "Mark-up & Styles"
+      %ul
+        %li= "HTML/XHTML + CSS"
+        %li= "HTML5 + CSS3"
+        %li= "Haml, sass"
+    %li
+      = "Frameworks"
+      %ul
+        %li= "Ruby on Rails (Ruby)"
+        %li= "Django (Python)"
+        %li= "Drupal (PHP)"
+        %li= "jQuery (JavaScript)"
+    %li
+      = "IDEs & editors"
+      %ul
+        %li= "Notepad++"
+        %li= "RubyMine"
+        %li= "NetBeans"
+    %li
+      = "Source Control"
+      %ul
+        %li= "SVN"
+        %li= "GIT"
+    %li
+      = "Design, animation, 3D modeling "
+      %ul
+        %li= "Adobe Illustrator"
+        %li= "Adobe Photoshop"
+        %li= "Adobe Flash"
+        %li= "Adobe InDesign"
+        %li= "Adobe After Effects"
+        %li= "Rhinoceros"
 
+%section
+  %h1= "Testimonials"
+  %ul
+    %li
+      %blockquote
+        %p= "&ldquo;".html_safe + "Its been a pleasure working with Veronica. She is personable and hard-working, and has made a real impact on our product development, using her creative skills to help ensure our product is appealing in both a visual and functional way." + "&rdquo;".html_safe
+        %p
+          = "Alex North, "
+          %span.position= "Product Manager at KantarMedia Audiences"
+    %li
+      %blockquote
+        %p= "&ldquo;".html_safe + "Veronica is an excelent professional with an incredible talent, versatility and learning abilities. A self-taught like few others. Methodical, creative and hard-worker, always helping the team members grow. Beyond the professional area, she's a sensitive human being, supportive and fun. It was a pleasure working with her." + "&rdquo;".html_safe
+        %p
+          = "Gonzalo Saavedra, "
+          %span.position= "Senior Software Engineer at Citrusbyte"
+    %li
+      %blockquote
+        %p= "&ldquo;".html_safe + "Verónica es el tipo de personas que recomendaría si estas pensando armar un hot design team. Siempre dispuesta a colaborar, aportar nuevas ideas, aprender, enseñar, probar, seguir aportando y empezar de nuevo con otra idea. El profesionalismo de su trabajo, que aseguro que no es poco, queda opacado por su buena disposición y su energía inagotable. Siempre un gusto trabajar junto a ella." + "&rdquo;".html_safe
+        %p
+          = "Ivan Wolcan, "
+          %span.position= "GUI Manager at Globant"
