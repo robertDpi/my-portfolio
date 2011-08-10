@@ -3,8 +3,7 @@ class Project < ActiveRecord::Base
   has_attached_file :cover,
                     {
                       :styles => {
-                          :medium => "300x300>",
-                          :thumb => "100x100>"
+                          :thumb => "182x142>"
                       },
                     }.merge(Rails.configuration.paperclip_storage)
 

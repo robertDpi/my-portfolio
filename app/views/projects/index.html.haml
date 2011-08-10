@@ -1,16 +1,11 @@
-- title "Projects"
-
-%ul
-  - @projects.each do |project|
-    %li
-      %h3= "#{project.title}"
-      %h4= "#{project.subtitle}"
-      %p.testimonial= project.description
-      - if user_signed_in?
-        %ul.actions
-          %li= link_to("Show", project_path(project.id), :class => 'show')
-          %li= link_to("Edit", edit_project_path(project.id), :class => 'edit')
-          %li= link_to("Delete", delete_project_path(project.id), :class => 'delete')
+- title "Portfolio"
 
 - if user_signed_in?
   = link_to("Create a new project", new_project_path, :class => 'new')
+
+- @projects.each do |project|
+  %article
+    %a{ :href => project_path(project.id) }
+      - if project.cover_file_name != nil
+        = image_tag project.cover.url(:thumb)
+      %h1= "#{project.title}"

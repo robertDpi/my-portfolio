@@ -1,11 +1,14 @@
 - title "#{@project.title}"
-
-%h3= @project.subtitle
+- content_for :subtitle do
+  = @project.subtitle
 %p= @project.description
+
+- if user_signed_in?
+  %ul.actions
+    %li= link_to("Edit", edit_project_path(@project.id), :class => 'edit')
+    %li= link_to("Delete", delete_project_path(@project.id), :class => 'delete')
 
 - if @project.cover_file_name != nil
   = image_tag @project.cover.url
-  = image_tag @project.cover.url(:medium)
-  = image_tag @project.cover.url(:thumb)
 
 = link_to("<< Back to List", projects_path, :class => 'back-link')

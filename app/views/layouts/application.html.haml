@@ -19,8 +19,9 @@
 
     %div.sidebar
       %header
-        %h1= link_to_unless_current("Vero Rebagliatte", root_path)
-        %h2= "UI Designer & Developer"
+        %hgroup
+          %h1= link_to_unless_current("Vero Rebagliatte", root_path)
+          %h2= "UI Designer & Developer"
       %nav
         %h1.hidden= "Main navigation"
         %ul
@@ -36,7 +37,12 @@
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
 
-      %h1= yield(:title)
+      - if (yield(:subtitle)=="")
+        %h1= yield(:title)
+      -else
+        %hgroup
+          %h1= yield(:title)
+          %h2= yield(:subtitle)
       = yield
 
     %footer
