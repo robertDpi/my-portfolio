@@ -13,4 +13,34 @@
     = form.label :body
     = form.text_area :body
   %input{:type => "submit", :value => "Send"}
-  
+
+%section
+  %h1= "Contact Information"
+  %dl
+    %dt= "Skype: "
+    %dd= link_to("veronica.rebagliatte", "skype:veronica.rebagliatte?call")
+    %dt= "Mail/IM: "
+    %dd= link_to("veronica@rebagliatte.com", "mailto:veronica@rebagliatte.com")
+    %dt= "vCard"
+    %dd= link_to("Download my vCard", "/docs/Veronica-Rebagliatte.vcf")
+
+%section  
+  %h1= "Networks"
+  %ul
+    %li= link_to("Google+", "https://plus.google.com/102594733146864468374/posts")
+    %li= link_to("LinkedIn", "http://uy.linkedin.com/in/rebagliatte")
+    %li= link_to("Github", "https://github.com/rebagliatte")
+    %li= link_to("Behance", "http://www.behance.net/rebagliatte")
+    %li= link_to("Delicious", "http://www.delicious.com/rebagliatte")
+
+    %li= link_to("Facebook", "http://www.facebook.com/rebagliatte")
+    %li= link_to("Twitter", "http://www.twitter.com/rebagliatte")
+    %li= link_to("Zerply", "http://www.zerply.com/profile/rebagliatte")
+    %li= link_to("Dribble", "http://dribbble.com/rebagliatte")
+    %li= link_to("Chamber", "http://chamber.com/vernica-rebagliatte")
+    %li= link_to("Flickr", "http://www.flickr.com/photos/rebagliatte/")
+
+    %li= link_to("YouTube", "http://www.youtube.com/vrebagliatte")
+    %li= link_to("LastFM", "http://www.lastfm.es/user/rebagliatte")
+    %li= link_to("Scribd", "http://www.scribd.com/rebagliatte")
+    %li= link_to("Cpluv", "http://www.computerlove.net/profile/users/rebagliatte")
