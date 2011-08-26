@@ -32,7 +32,7 @@ blockquote:after,
 q:before, 
 q:after {content: ''; content: none;}
 
-a {margin: 0; padding: 0; background: transparent;}
+a {margin: 0; padding: 0; background: transparent; text-decoration: none;}
 
 del {text-decoration: line-through;}
 
