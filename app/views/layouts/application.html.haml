@@ -10,17 +10,18 @@
     = favicon_link_tag "favicon.png"
     -# = javascript_include_tag :all
     = csrf_meta_tag
-  %body
+  %body{:class => "#{params[:controller]}-#{params[:action]}"}
     - if user_signed_in?
-      %p#authentication
-        = "Logged in as #{current_user.username}"
+      %p.authentication
+        = "Logged in as "
+        %strong= "#{current_user.username}"
         = link_to "Change your password", edit_user_password_path
         = link_to "Logout", destroy_user_session_path
 
-    %div#sidebar
-      %header
+    %header
+      %a{:href=> "#{root_path}"}
         %hgroup
-          %h1= link_to_unless_current("Vero Rebagliatte", root_path)
+          %h1= "Vero Rebagliatte"
           %h2= "UI Designer & Developer"
       %nav
         %h1.hidden= "Main navigation"
@@ -33,17 +34,24 @@
           %li= link_to_unless_current("About me", about_path)
           %li= link_to_unless_current("Contact", contact_path)
 
-    %section#content
-      - flash.each do |name, msg|
-        = content_tag :div, msg, :id => "flash_#{name}"
-
+    %section
       - if (yield(:subtitle)=="")
         %h1= yield(:title)
       -else
+
         %hgroup
-          %h1= yield(:title)
+          %h1
+            %a{:href => "#{projects_path}", :title => "Back"}
+              ="&gt;".html_safe
+            = yield(:title)
           %h2= yield(:subtitle)
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
       = yield
 
-    %footer
-      %p= "Vero Rebagliatte"
+    %footer.main
+      %p
+        = "This site was lovingly crafted in "
+        = link_to("Ruby on Rails", "http://rubyonrails.org/")
+        = " by "
+        = link_to_unless_current("Vero Rebagliatte", root_path)

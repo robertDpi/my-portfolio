@@ -3,21 +3,25 @@
 %figure
   = image_tag('veronica_rebagliatte.png')
 
-%p= "Hi there. My name is Verónica Rebagliatte. I am a UI designer and developer."
-%p= "It is my belief that our profession is something that defines us; and I am deeply committed to make the web a more usable and accessible place for everyone."
-%p= "I pride myself on being an easy to work with, friendly person and a restless learner. And yes... I am a full-time geek!"
+%p
+  = "Hi there! I am a UI designer and developer from"
+  = link_to("Uruguay", "http://maps.google.com/maps/place?q=Uruguay")
+  = "."
+%p= "I've been proud contributor in over 40 projects until now and counting. At the time being I'm focused on interaction design an usability advisories."
+%p= "I just love my work and really consider that it defines a great deal of who I am; so, it better be good!"
 
 %section
+  %h1= "Areas of expertise"
+  %ul.bullets
+    %li= "User experience"
+    %li= "Usability"
+    %li= "Information Architecture"
+    %li= "Interaction Design"
+    %li= "SEO"
+        
+%section
   %h1= "Skills"
-  %ul
-    %li
-      = "Areas of expertise"
-      %ul
-        %li= "User experience"
-        %li= "Usability"
-        %li= "Information Architecture"
-        %li= "Interaction Design"
-        %li= "SEO"
+  %ul.bullets
     %li
       = "Wireframing software"
       %ul
@@ -57,24 +61,39 @@
         %li= "Adobe After Effects"
         %li= "Rhinoceros"
 
-%section
+%section.testimonials
   %h1= "Testimonials"
-  %ul
-    %li
-      %blockquote
-        %p= "&ldquo;".html_safe + "Its been a pleasure working with Veronica. She is personable and hard-working, and has made a real impact on our product development, using her creative skills to help ensure our product is appealing in both a visual and functional way." + "&rdquo;".html_safe
-        %p
-          = "Alex North, "
-          %span.position= "Product Manager at KantarMedia Audiences"
-    %li
-      %blockquote
-        %p= "&ldquo;".html_safe + "Veronica is an excelent professional with an incredible talent, versatility and learning abilities. A self-taught like few others. Methodical, creative and hard-worker, always helping the team members grow. Beyond the professional area, she's a sensitive human being, supportive and fun. It was a pleasure working with her." + "&rdquo;".html_safe
-        %p
-          = "Gonzalo Saavedra, "
-          %span.position= "Senior Software Engineer at Citrusbyte"
-    %li
-      %blockquote
-        %p= "&ldquo;".html_safe + "Verónica es el tipo de personas que recomendaría si estas pensando armar un hot design team. Siempre dispuesta a colaborar, aportar nuevas ideas, aprender, enseñar, probar, seguir aportando y empezar de nuevo con otra idea. El profesionalismo de su trabajo, que aseguro que no es poco, queda opacado por su buena disposición y su energía inagotable. Siempre un gusto trabajar junto a ella." + "&rdquo;".html_safe
-        %p
-          = "Ivan Wolcan, "
-          %span.position= "GUI Manager at Globant"
+  %article
+    %blockquote{:cite => "http://www.linkedin.com/in/rebagliatte"}
+      %p
+        %span= "&ldquo;".html_safe
+        ="Its been a pleasure working with Veronica. She is personable and hard-working, and has made a real impact on our product development, using her creative skills to help ensure our product is appealing in both a visual and functional way."
+        %span= "&rdquo;".html_safe
+    %footer
+      %p
+        = "Alex North, "
+        %span.position= "Product Manager at KantarMedia Audiences"
+  %article
+    %blockquote
+      %p
+        %span= "&ldquo;".html_safe
+        ="Veronica is an excelent professional with an incredible talent, versatility and learning abilities. A self-taught like few others. Methodical, creative and hard-worker, always helping the team members grow. Beyond the professional area, she's a sensitive human being, supportive and fun. It was a pleasure working with her."
+        %span= "&rdquo;".html_safe
+    %footer
+      %p
+        = "Gonzalo Saavedra, "
+        %span.position= "Senior Software Engineer at Citrusbyte"
+  %article
+    %blockquote
+      %p
+        %span= "&ldquo;".html_safe
+        ="Verónica es el tipo de personas que recomendaría si estas pensando armar un hot design team. Siempre dispuesta a colaborar, aportar nuevas ideas, aprender, enseñar, probar, seguir aportando y empezar de nuevo con otra idea."
+        %br
+        ="El profesionalismo de su trabajo, que aseguro que no es poco, queda opacado por su buena disposición y su energía inagotable."
+        %br
+        ="Siempre un gusto trabajar junto a ella."
+        %span= "&rdquo;".html_safe
+    %footer  
+      %p
+        = "Ivan Wolcan, "
+        %span.position= "GUI Manager at Globant"

@@ -10,8 +10,8 @@
     = form.label :email
     = form.text_field :email
   %div.field
-    = form.label :body
-    = form.text_area :body
+    = form.label :message
+    = form.text_area :message
   %input{:type => "submit", :value => "Send", :class => "btn"}
 
 %section
@@ -21,26 +21,24 @@
     %dd= link_to("veronica.rebagliatte", "skype:veronica.rebagliatte?call")
     %dt= "Mail/IM: "
     %dd= link_to("veronica@rebagliatte.com", "mailto:veronica@rebagliatte.com")
-    %dt= "vCard"
+    %dt= "vCard: "
     %dd= link_to("Download my vCard", "/docs/Veronica-Rebagliatte.vcf")
 
-%section  
+%section.networks  
   %h1= "Networks"
   %ul
-    %li= link_to("Google+", "https://plus.google.com/102594733146864468374/posts")
-    %li= link_to("LinkedIn", "http://uy.linkedin.com/in/rebagliatte")
-    %li= link_to("Github", "https://github.com/rebagliatte")
-    %li= link_to("Behance", "http://www.behance.net/rebagliatte")
-    %li= link_to("Delicious", "http://www.delicious.com/rebagliatte")
-
-    %li= link_to("Facebook", "http://www.facebook.com/rebagliatte")
-    %li= link_to("Twitter", "http://www.twitter.com/rebagliatte")
-    %li= link_to("Zerply", "http://www.zerply.com/profile/rebagliatte")
-    %li= link_to("Dribble", "http://dribbble.com/rebagliatte")
-    %li= link_to("Chamber", "http://chamber.com/vernica-rebagliatte")
-    %li= link_to("Flickr", "http://www.flickr.com/photos/rebagliatte/")
-
-    %li= link_to("YouTube", "http://www.youtube.com/vrebagliatte")
-    %li= link_to("LastFM", "http://www.lastfm.es/user/rebagliatte")
-    %li= link_to("Scribd", "http://www.scribd.com/rebagliatte")
-    %li= link_to("Cpluv", "http://www.computerlove.net/profile/users/rebagliatte")
+    %li.linkedin= link_to("LinkedIn", "http://uy.linkedin.com/in/rebagliatte")
+    %li.github= link_to("Github", "https://github.com/rebagliatte")
+    %li.delicious= link_to("Delicious", "http://www.delicious.com/rebagliatte")
+    %li.behance= link_to("Behance", "http://www.behance.net/rebagliatte")
+    %li.last-fm= link_to("LastFM", "http://www.lastfm.es/user/rebagliatte")
+    %li.google= link_to("Google+", "https://plus.google.com/102594733146864468374/posts")    
+    %li.facebook= link_to("Facebook", "http://www.facebook.com/rebagliatte")
+    %li.twitter= link_to("Twitter", "http://www.twitter.com/rebagliatte")
+    %li.flickr= link_to("Flickr", "http://www.flickr.com/photos/rebagliatte/")
+    %li.hidden= link_to("Zerply", "http://www.zerply.com/profile/rebagliatte")
+    %li.hidden= link_to("Dribble", "http://dribbble.com/rebagliatte")
+    %li.hidden= link_to("Chamber", "http://chamber.com/vernica-rebagliatte")
+    %li.hidden= link_to("YouTube", "http://www.youtube.com/vrebagliatte")
+    %li.hidden= link_to("Scribd", "http://www.scribd.com/rebagliatte")
+    %li.hidden= link_to("Cpluv", "http://www.computerlove.net/profile/users/rebagliatte")

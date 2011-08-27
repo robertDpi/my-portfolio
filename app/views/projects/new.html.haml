@@ -2,7 +2,7 @@
 
 = form_for(:project, :html => { :multipart => true }, :url => {:action => 'create'}) do |form|
   = render(:partial => "form", :locals => {:form => form})
-  = submit_tag("Create project")
+  = submit_tag("Create project", :class => 'btn')
 
-- link_to("<< Back to List", projects_path, :class => 'back-link')
+- link_to("Cancel", projects_path, :class => 'btn secondary-btn')
 

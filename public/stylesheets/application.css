@@ -40,6 +40,9 @@ h2 {
 hgroup h1 {
   margin-bottom: 0;
 }
+section section h1 {
+  font-size: 1.8em;
+}
 
 /* paragraphs */
 p {
@@ -53,15 +56,13 @@ p br {
   margin-bottom: 0.5em;
 }
 * p:last-child {margin-bottom: 0;}
-
-strong, b {font-weight: bold;}
-em, i {font-style: italic;}
+strong {font-weight: bold;}
 
 ::-moz-selection {background: #FFF34C; color: #333333;}
 ::selection {background: #FFF34C; color: #333333;}
 
 /* lists */
-ul, ol {
+ul, ol, dl {
   margin-bottom: 24px;
   line-height: 1.5em;
 }
@@ -72,6 +73,12 @@ ol ol {
 ul.bullets,
 ul.bullets ul{
   list-style: square inside none
+}
+dt {
+  display: block;
+  clear: both;
+  float: left;
+  width: 4em;
 }
 
 /* quotes */
@@ -100,19 +107,55 @@ a {
 a:hover {
   color: #FF3366;
 }
-a:visited {
-  text-decoration: underline;
-  /*color: #551A8B;*/
-}
 a:active,
 a:focus {
   position: relative;
   top: 1px;
 }
 
+/* buttons */
+.btn {
+  background-color: #149FCC;
+  color: #f3fdff;
+  font-weight: bold;
+  border: 0;
+  padding: 7px 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 4px;
+}
+.btn:hover {
+  background-color: #1B8DB2;
+  color: #ffffff;
+}
+.secondary-btn {
+  background-color: #666666;
+  color: #f4f4f4;
+}
+.secondary-btn:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* forms */
+form {
+  margin-bottom: 24px;
+}
+form .field {
+  margin-bottom: 10px;
+}
+form input,
+form textarea {
+  clear: both;
+  display: block;
+  padding: 3px;
+}
+
 /* images */
 img {
-  padding: 5px;
+  padding: 1px;
   background-color: #fff;
   border: 5px solid #ddd;
 }
@@ -135,14 +178,27 @@ section {
 section section {
   padding: 0;
 }
-footer {
+footer.main {
+  border-top: 1px solid #ececec;
   clear: both;
+  padding: 15px 30px 15px 340px;
+  font-size: 0.8em;
+  color: #666666;
+  background-color: rgba(0, 0, 0, 0.01);
 }
-#authentication {
+.authentication {
   position: absolute;
   top: 30px;
   right: 30px;
   font-size: 1em;
+}
+.menu {
+  clear: both;
+  margin-bottom: 30px;
+}
+.menu li {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 /* header */
@@ -167,10 +223,13 @@ body.projects-index article {
 }
 body.projects-index article h1 {
   font-size: 1.5em;
+  color: inherit;
 }
 
 /* Project detail */
-
+body.projects-show p {
+  clear: both;
+}
 
 /* About */
 body.pages-about img {
@@ -187,3 +246,26 @@ body.pages-about .testimonials footer {
 body.pages-about .testimonials footer .position {
   color: #666666;
 }
+
+/* Contact */
+body.contact-new .networks ul li a {
+  display: block;
+  background: url(../images/vr_sprite.png) top left no-repeat transparent;
+  line-height: 35px;
+  padding-left: 45px;
+  border: 1px solid #f1f1f1;
+  margin-bottom: 10px;
+}
+body.contact-new .networks ul li a:hover {
+  border-color: #efefef;
+  background-color: #ffffff;
+}
+body.contact-new .networks ul li.linkedin a {background-position: 0 -35px;}
+body.contact-new .networks ul li.github a {background-position: 0 -70px;}
+body.contact-new .networks ul li.delicious a {background-position: 0 -105px;}
+body.contact-new .networks ul li.behance a {background-position: 0 -140px;}
+body.contact-new .networks ul li.last-fm a {background-position: 0 -175px;}
+body.contact-new .networks ul li.google a {background-position: 0 -210px;}
+body.contact-new .networks ul li.facebook a {background-position: 0 -245px;}
+body.contact-new .networks ul li.twitter a {background-position: 0 -280px;}
+body.contact-new .networks ul li.flickr a {background-position: 0 -315px;}
