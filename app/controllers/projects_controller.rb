@@ -12,6 +12,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    5.times{ @project.assets.build }
   end
 
   def create
@@ -26,6 +27,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    5.times{ @project.assets.build }
   end
 
   def update

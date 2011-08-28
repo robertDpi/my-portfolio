@@ -1,17 +1,24 @@
 = error_messages_for(@project)
 
-%div.field
-  = form.label :title
-  = form.text_field :title
+= form.label :title
+= form.text_field :title
 
-%div.field
-  %dt= form.label :subtitle
-  %dd= form.text_field :subtitle
+= form.label :subtitle
+= form.text_field :subtitle
 
-%div.field
-  %dt= form.label :description
-  %dd= form.text_area :description
+= form.label :description
+= form.text_area :description
 
-%div.field
-  %dt= form.label :cover
-  %dd= form.file_field :cover
+= form.label :cover
+= form.file_field :cover
+
+%fieldset
+  %legend= "Assets or screenshots"
+  - form.fields_for :assets do |asset|
+    - if asset.object.new_record?
+      = asset.label :asset, "New image file"
+      = asset.file_field :asset
+    - else
+      = asset.label :_destroy, "Delete"
+      = asset.check_box :_destroy
+      = link_to(image_tag(asset.object.asset.url(:thumb)), asset.object.asset.url(:original))
