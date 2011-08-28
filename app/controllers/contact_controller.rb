@@ -9,7 +9,7 @@ class ContactController < ApplicationController
       Notification.contact_me(@contact).deliver
       redirect_to root_path, :notice => "Thanks! It's nice to hear from you!"
     else
-      render :new, :notice => "Please correct the errors below"
+      render :new
     end
   end
 end

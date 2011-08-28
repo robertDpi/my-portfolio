@@ -14,8 +14,8 @@
     - if user_signed_in?
       %p.authentication
         = "Logged in as "
-        %strong= "#{current_user.username}"
-        = link_to "Change your password", edit_user_password_path
+        %strong= "#{current_user.username}."
+        = link_to " Change your password", edit_user_password_path
         = link_to "Logout", destroy_user_session_path
 
     %header
@@ -46,7 +46,7 @@
             = yield(:title)
           %h2= yield(:subtitle)
       - flash.each do |name, msg|
-        = content_tag :div, msg, :id => "flash_#{name}"
+        = content_tag :div, msg, :class => "message flash-#{name}"
       = yield
 
     %footer.main

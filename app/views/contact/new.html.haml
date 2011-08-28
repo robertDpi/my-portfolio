@@ -3,15 +3,12 @@
 = error_messages_for(@contact)
 
 = form_for @contact, :url => contact_mail_path do |form|
-  %div.field
-    = form.label :name
-    = form.text_field :name
-  %div.field
-    = form.label :email
-    = form.text_field :email
-  %div.field
-    = form.label :message
-    = form.text_area :message
+  = form.label :name
+  = form.text_field :name
+  = form.label :email
+  = form.text_field :email
+  = form.label :message
+  = form.text_area :message
   %input{:type => "submit", :value => "Send", :class => "btn"}
 
 %section

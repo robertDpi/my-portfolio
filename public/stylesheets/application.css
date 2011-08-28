@@ -20,6 +20,7 @@ body {
   color: #333333;
   background: url(../images/bg.png) top left repeat-y #f7f7f7;
   font-size: 1em;
+  min-width: 960px;
 }
 
 /* headings */
@@ -143,14 +144,21 @@ a:focus {
 form {
   margin-bottom: 24px;
 }
-form .field {
-  margin-bottom: 10px;
-}
 form input,
 form textarea {
   clear: both;
   display: block;
   padding: 3px;
+  margin-bottom: 10px;
+}
+.field_with_errors label {
+  color: #B2123D;
+  font-weight: bold;
+}
+.field_with_errors input,
+.field_with_errors textarea {
+  background-color: #ffeef2;
+  border: 1px solid #B2123D;
 }
 
 /* images */
@@ -210,7 +218,26 @@ header :hover h2 {color: #a2a4a6;}
 header nav a:hover {background-color: #ececec;}
 
 /* Messages */
-
+.message {
+  border: 1px solid #B2123D;
+  background-color: #ffeef2;
+  padding: 0.5em 1em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+.message.flash-notice {
+  background-color: #deffe3;
+  border-color: #00B219;
+}
+.message p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.message ul {
+  margin-bottom: 0;
+}
 
 /*
  * Section-specific styles

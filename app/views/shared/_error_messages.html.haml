@@ -1,7 +1,7 @@
 - if object && object.errors.size > 0
-  %div.errors
-    %p= "#{pluralize(object.errors.size, "error")} in the following fields:"
-    %ul
+  %div.message
+    %p= "Please fix the #{(object.errors.size > 1)? "errors" : "error"} bellow..."
+    %ul.bullets
       - object.errors.full_messages.each do |msg|
         %li
           = msg
