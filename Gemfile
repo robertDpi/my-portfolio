@@ -5,6 +5,7 @@ gem 'mysql2', '0.2.6'
 gem 'haml'
 gem 'paperclip', '~> 2.3'
 gem 'devise'
+gem 'bluecloth'
 
 group :development do
   gem 'rspec-rails'
