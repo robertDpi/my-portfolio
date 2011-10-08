@@ -58,7 +58,5 @@ heroku config:add S3_KEY=yourkey S3_SECRET=yoursecret S3_BUCKET=yourbucket GMAIL
 
 To test S3 from the development environment
 --------------------------------------------
-In heroku_env...
-enter tour data.
-Uncomment ... lines
+Go to config/development.rb and uncomment lines 30 to 37, the ones about config.paperclip_storage. That's it!
 

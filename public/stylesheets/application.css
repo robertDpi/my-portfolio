@@ -16,7 +16,7 @@
  */
 
 body {
-  font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #333333;
   background: url(../images/bg.png) top left repeat-y #f7f7f7;
   font-size: 1em;
@@ -275,7 +275,7 @@ body.pages-about .testimonials footer .position {
 }
 
 /* Contact */
-body.contact-new .networks ul li a {
+.networks ul li a {
   display: block;
   background: url(../images/vr_sprite.png) top left no-repeat transparent;
   line-height: 35px;
@@ -283,16 +283,16 @@ body.contact-new .networks ul li a {
   border: 1px solid #f1f1f1;
   margin-bottom: 10px;
 }
-body.contact-new .networks ul li a:hover {
+.networks ul li a:hover {
   border-color: #efefef;
   background-color: #ffffff;
 }
-body.contact-new .networks ul li.linkedin a {background-position: 0 -35px;}
-body.contact-new .networks ul li.github a {background-position: 0 -70px;}
-body.contact-new .networks ul li.delicious a {background-position: 0 -105px;}
-body.contact-new .networks ul li.behance a {background-position: 0 -140px;}
-body.contact-new .networks ul li.last-fm a {background-position: 0 -175px;}
-body.contact-new .networks ul li.google a {background-position: 0 -210px;}
-body.contact-new .networks ul li.facebook a {background-position: 0 -245px;}
-body.contact-new .networks ul li.twitter a {background-position: 0 -280px;}
-body.contact-new .networks ul li.flickr a {background-position: 0 -315px;}
+.networks ul li.linkedin a {background-position: 0 -35px;}
+.networks ul li.github a {background-position: 0 -70px;}
+.networks ul li.delicious a {background-position: 0 -105px;}
+.networks ul li.behance a {background-position: 0 -140px;}
+.networks ul li.last-fm a {background-position: 0 -175px;}
+.networks ul li.google a {background-position: 0 -210px;}
+.networks ul li.facebook a {background-position: 0 -245px;}
+.networks ul li.twitter a {background-position: 0 -280px;}
+.networks ul li.flickr a {background-position: 0 -315px;}
