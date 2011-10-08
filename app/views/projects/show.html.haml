@@ -7,7 +7,7 @@
     %li= link_to("Edit", edit_project_path(@project.id), :class => 'btn')
     %li= link_to("Delete", delete_project_path(@project.id), :class => 'btn')
 
-%p= @project.description
+= @project.description
 
 - if @project.cover_file_name != nil
   = image_tag @project.cover.url
