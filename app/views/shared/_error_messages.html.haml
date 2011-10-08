@@ -1,6 +1,6 @@
 - if object && object.errors.size > 0
   %div.message
-    %p= "Please fix the #{(object.errors.size > 1)? "errors" : "error"} bellow..."
+    %p= "Uh, it seems you need to check #{(object.errors.size > 1)? "these fields" : "this field"}..."
     %ul.bullets
       - object.errors.full_messages.each do |msg|
         %li
