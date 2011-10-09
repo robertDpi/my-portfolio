@@ -21,7 +21,6 @@ class ProjectsController < ApplicationController
       flash[:notice] = "Project created successfully!"
       redirect_to project_path(@project.id)
     else
-      flash[:notice] = "Please correct the errors bellow..."
       render :new
     end
   end
@@ -35,7 +34,6 @@ class ProjectsController < ApplicationController
       flash[:notice] = "Project updated successfully"
       redirect_to project_path(@project.id)
     else
-      flash[:notice] = "Please correct the errors bellow..."
       render :edit
     end
   end

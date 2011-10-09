@@ -10,6 +10,8 @@
 :markdown
   #{@project.description}
 
-- if @project.cover_file_name != nil
-  = image_tag @project.cover.url
-  
+- @project.assets.each do |asset|
+  - if asset.asset_file_name != nil
+    = image_tag asset.asset.url
+    %p.caption= asset.caption
+    

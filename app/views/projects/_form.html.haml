@@ -15,10 +15,14 @@
 %fieldset
   %legend= "Assets or screenshots"
   - form.fields_for :assets do |asset|
-    - if asset.object.new_record?
-      = asset.label :asset, "New image file"
-      = asset.file_field :asset
-    - else
-      = asset.label :_destroy, "Delete"
-      = asset.check_box :_destroy
-      = link_to(image_tag(asset.object.asset.url(:thumb)), asset.object.asset.url(:original))
+    -# TODO: Add fields on demand.
+    %div.field
+      - if asset.object.new_record?
+        = asset.label :asset, "New image file"
+        = asset.file_field :asset
+      - else
+        = asset.label :_destroy, "Delete"
+        = asset.check_box :_destroy
+        = link_to(image_tag(asset.object.asset.url(:thumb)), asset.object.asset.url(:original))
+      = asset.label :caption, "Caption"
+      = asset.text_field :caption
