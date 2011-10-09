@@ -55,10 +55,6 @@ p {
 p strong {
 	color: #666;
 }
-p.caption {
-  font-style: italic;
-  color: #666;
-}
 * p:last-child {margin-bottom: 0;}
 strong {font-weight: bold;}
 
@@ -83,6 +79,13 @@ dt {
   clear: both;
   float: left;
   width: 4em;
+}
+
+/* captions */
+figcaption {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1em;
 }
 
 /* quotes */
@@ -175,7 +178,7 @@ form label {
 form input,
 form textarea {
   clear: both;
-  display: inline-block;
+  display: block;
   margin-bottom: 10px;
   padding: 4px;
   line-height: 18px;

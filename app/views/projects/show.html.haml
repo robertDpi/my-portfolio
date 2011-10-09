@@ -12,6 +12,7 @@
 
 - @project.assets.each do |asset|
   - if asset.asset_file_name != nil
-    = image_tag asset.asset.url
-    %p.caption= asset.caption
+    %figure
+      = image_tag asset.asset.url
+      %figcaption= asset.caption
     
