@@ -10,9 +10,25 @@
 :markdown
   #{@project.description}
 
+%dl
+  - if @project.role?
+    %dt= "Role"
+    %dd= @project.role
+  - if @project.technologies?
+    %dt= "Tecnologies"
+    %dd= @project.technologies
+  - if @project.agency?
+    %dt= "Agency"
+    %dd= @project.agency
+  - if @project.year?
+    %dt= "Year"
+    %dd= @project.year
+  - if @project.live_site?
+    %dt= "Live Site"
+    %dd= @project.live_site
+
 - @project.assets.each do |asset|
   - if asset.asset_file_name != nil
     %figure
       = image_tag asset.asset.url
       %figcaption= asset.caption
-    

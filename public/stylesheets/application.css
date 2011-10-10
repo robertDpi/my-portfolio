@@ -312,6 +312,10 @@ body.projects-index a:hover img {
 body.projects-show p {
   clear: both;
 }
+body.projects-show dl dt {
+  width: 7em;
+  color: #666666;
+}
 
 /* About */
 body.pages-about img {
@@ -387,13 +391,3 @@ body.pages-about .testimonials footer .position {
 }
 
 /* IE **************************************************************************************************************************************/
-.ie6 header,
-.ie6 section,
-.ie7 .wrapper,
-.ie7 section {
-	width: 960px;
-}
-.ie6 footer,
-.ie7 footer {
-	background-color: #f1f1f2;
-}
