@@ -9,25 +9,22 @@
 @import url("html5-reset.css");
 
 /* Pallete */
-/*magenta: #FF336A, dark magenta: #B2123D, cian: #149FCC, dark cian: #1B8DB2, yellow: #FFF34C*/
+/*magenta: #FF336A, dark magenta: #B2123D, cian: #149FCC, dark cian: #1B8DB2, yellow: #FFF34C, light gray: #F9F9F9*/
 
-/*
- * Global Styles
- */
+/* Global Styles ***************************************************************************************************************************/
 
 body {
   font-family: "Helvetica Neue", Helvetica, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #333333;
-  background: url(../images/bg.png) top left repeat-y #f7f7f7;
   font-size: 14px;
-  min-width: 960px;
+  background-color: #f4f4f4;
 }
 
 /* headings */
 h1, h2, h3 {
   text-shadow: 0 -1px #ffffff;
   letter-spacing: -0.04em;
-  margin-bottom: 24px;
+  margin-bottom: 1em;
   clear: both;
 }
 h1 {
@@ -49,6 +46,7 @@ section section h1 {
 p {
   margin-bottom: 24px;
   line-height: 1.5em;
+  max-width: 600px;
 }
 p strong {
 	color: #666;
@@ -61,16 +59,16 @@ strong {font-weight: bold;}
 
 /* lists */
 ul, ol, dl {
-  margin-bottom: 24px;
+  margin-bottom: 2em;
   line-height: 1.5em;
 }
 ul ul,
 ol ol {
-  margin: 0 0 0 24px;
+  margin: 0 0 0 1em;
 }
 ul.bullets,
 ul.bullets ul{
-  list-style: disc inside none
+  list-style: disc inside none;
 }
 ul.bullets ul{
   padding-bottom: 1em;
@@ -83,6 +81,9 @@ dt {
 }
 
 /* captions */
+figure img {
+  border: 1px solid #eaeaea;
+}
 figcaption {
   font-style: italic;
   color: #666;
@@ -91,7 +92,7 @@ figcaption {
 
 /* quotes */
 blockquote {
-  border-left: 5px solid #ccc;
+  border-left: 0.25em solid #ccc;
   padding-left: 1em;
   text-indent: -0.4em;
   margin-bottom: 1em;
@@ -118,20 +119,19 @@ a:hover {
 a:active,
 a:focus {
   position: relative;
-  top: 1px;
+  top: 0.1em;
 }
 
 /* buttons */
 .btn {
   cursor: pointer;
   display: inline-block;
-  padding: 5px 14px 6px;
-  margin-right: 5px;
+  padding: 0.3em 0.5em;
   font-weight: bold;
   line-height: normal;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
   -webkit-transition: 0.1s linear all;
   -moz-transition: 0.1s linear all;
   transition: 0.1s linear all;
@@ -162,7 +162,7 @@ a:focus {
 
 /* forms */
 form {
-  margin-bottom: 24px;
+  margin-bottom: 1em;
 }
 form fieldset legend {
   font-weight: bold;
@@ -175,19 +175,19 @@ form fieldset .field {
 form label {
   display: block;
   clear: both;
+  line-height: 1.5em;
 }
 form input,
 form textarea {
   clear: both;
   display: block;
-  margin-bottom: 10px;
-  padding: 4px;
-  line-height: 18px;
+  margin-bottom: 1em;
+  padding: 0.5em;
   color: #555555;
   border: 1px solid #ccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
 }
 form input:focus,
 form textarea:focus {
@@ -216,14 +216,18 @@ form textarea:focus {
 /* layout */
 header,
 section {
-  padding: 30px 0 30px 30px;
+  padding: 2% 0 2% 2%;
   float: left;
 }
 header {
-  width: 282px;
+  width: 20%;
 }
 section {
-  width: 618px;
+  width: 74%;
+}
+section.main {
+  background: url(../images/bg.png) left top repeat-y #f7f7f7;
+  padding-right: 2%;
 }
 section section {
   padding: 0;
@@ -231,24 +235,23 @@ section section {
 footer.main {
   border-top: 1px solid #ececec;
   clear: both;
-  padding: 15px 30px 15px 340px;
+  padding: 1em 1em 1em 24%;
   font-size: 0.8em;
   color: #666666;
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: #efefef;
 }
 .authentication {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 1em;
+  right: 0;
+  padding: 2%;
 }
 .menu {
   clear: both;
-  margin-bottom: 30px;
+  margin-bottom: 1em;
 }
 .menu li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0.5em;
 }
 
 /* header */
@@ -257,7 +260,7 @@ header h1 {color: #322f31;}
 header h2 {color: #929497;}
 header :hover h1 {color: #FF3366;}
 header :hover h2 {color: #a2a4a6;}
-header nav a:hover {background-color: #ececec;}
+header nav a:hover {background-color: #f7f7f7;}
 
 /* Messages */
 .message {
@@ -265,10 +268,10 @@ header nav a:hover {background-color: #ececec;}
   border: 1px solid #FCEEC1;
   background-color: #FDF5D9;
   padding: 0.5em 1em;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin-bottom: 24px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  margin-bottom: 1em;
   font-size: 0.9em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
@@ -277,24 +280,19 @@ header nav a:hover {background-color: #ececec;}
   border-color: #BFE7BF;
 }
 .message p {
-  margin-bottom: 10px;
+  margin-bottom: 1em;
   font-weight: bold;
 }
 .message ul {
   margin-bottom: 0;
 }
 
-/*
- * Section-specific styles
- */
+/* Section-specific styles *******************************************************************************************************************/
 
 /* Project-list */
-body.projects-index section {
-  
-}
 body.projects-index article {
   float: left;
-  margin: 0 24px 24px 0;
+  margin: 0 1em 1em 0;
 }
 body.projects-index article h1 {
   font-size: 1em;
@@ -318,7 +316,7 @@ body.projects-show p {
 /* About */
 body.pages-about img {
   float: left;
-  margin: 0 30px 30px 0;
+  margin: 0 1em 1em 0;
 }
 body.pages-about .testimonials article {
   margin-bottom: 2em;
@@ -338,11 +336,11 @@ body.pages-about .testimonials footer .position {
   line-height: 35px;
   padding-left: 45px;
   border: 1px solid #f1f1f1;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
 }
 .networks ul li a:hover {
-  border-color: #efefef;
-  background-color: #ffffff;
+  border-color: #eaeaea;
+  background-color: #f9f9f9;
 }
 .networks ul li.linkedin a {background-position: 0 -35px;}
 .networks ul li.github a {background-position: 0 -70px;}
@@ -353,3 +351,49 @@ body.pages-about .testimonials footer .position {
 .networks ul li.facebook a {background-position: 0 -245px;}
 .networks ul li.twitter a {background-position: 0 -280px;}
 .networks ul li.flickr a {background-position: 0 -315px;}
+
+/* Media Queries *************************************************************************************************************************/
+
+@media screen and (min-width: 2000px) {
+  section.main,
+  footer.main {
+    background: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  header,
+  section.main,
+  footer.main {
+    width: 96%;
+    padding: 2%
+  }
+  header {
+    border-bottom: 1px solid #ececec;
+  }
+  header ul {
+    margin: 0;
+  }
+  header ul li {
+    float: left;
+    margin-right: 1em;
+  }
+  header ul ul {
+    display: none;
+  }
+  section.main {
+    background: #f7f7f7;
+    border-top: 1px solid #f4f4f4;
+  }
+}
+
+/* IE **************************************************************************************************************************************/
+.ie6 header,
+.ie6 section,
+.ie7 .wrapper,
+.ie7 section {
+	width: 960px;
+}
+.ie6 footer,
+.ie7 footer {
+	background-color: #f1f1f2;
+}
