@@ -34,7 +34,7 @@
           %li= link_to_unless_current("About me", about_path)
           %li= link_to_unless_current("Contact", contact_path)
 
-    %section
+    %section.main
       - if (yield(:subtitle)=="")
         %h1= yield(:title)
       -else
@@ -55,6 +55,7 @@
         = link_to("Ruby on Rails", "http://rubyonrails.org/")
         = " by "
         = link_to_unless_current("Vero Rebagliatte", root_path)
-        = " and hosted by "
-        = link_to("Heroku", "http://www.heroku.com/")
-        = "."
+        = " and is hosted at "
+        = link_to("Heroku.", "http://www.heroku.com/")
+        = " Wanna "
+        = link_to("fork it?", "https://github.com/rebagliatte")
