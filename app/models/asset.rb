@@ -3,7 +3,7 @@ class Asset < ActiveRecord::Base
   has_attached_file :asset,
                   {
                     :styles => {
-                        :thumb => "100x100!",
+                        :thumb => "100x100>",
                         :large => "618x480>"
                     },
                   }.merge(Rails.configuration.paperclip_storage)

@@ -15,7 +15,6 @@
 %fieldset
   %legend= "Assets or screenshots"
   - form.fields_for :assets do |asset|
-    -# TODO: Add fields on demand.
     %div.field
       - if asset.object.new_record?
         = asset.label :asset, "New image file"

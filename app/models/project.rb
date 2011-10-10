@@ -8,5 +8,5 @@ class Project < ActiveRecord::Base
                       },
                     }.merge(Rails.configuration.paperclip_storage)
   has_many :assets, :dependent => :destroy
-  accepts_nested_attributes_for :assets, :allow_destroy => true
+  accepts_nested_attributes_for :assets, :reject_if => lambda { |a| a[:caption].blank? }, :allow_destroy => true
 end
