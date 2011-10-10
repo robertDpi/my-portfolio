@@ -19,25 +19,23 @@ body {
   font-family: "Helvetica Neue", Helvetica, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #333333;
   background: url(../images/bg.png) top left repeat-y #f7f7f7;
-  font-size: 1em;
+  font-size: 14px;
   min-width: 960px;
 }
 
 /* headings */
 h1, h2, h3 {
-  font-family: "Helvetica Neue", Helvetica, 'Droid Sans', sans-serif;
   text-shadow: 0 -1px #ffffff;
+  letter-spacing: -0.04em;
   margin-bottom: 24px;
   clear: both;
 }
 h1 {
-  font-size: 2.1em;
-  letter-spacing: -0.06em;
+  font-size: 2em;
   color: #FF3366;
 }
 h2 {
   font-size: 1em;
-  letter-spacing: -0.04em;
   color: #666666;
 }
 hgroup h1 {
@@ -72,7 +70,10 @@ ol ol {
 }
 ul.bullets,
 ul.bullets ul{
-  list-style: square inside none
+  list-style: disc inside none
+}
+ul.bullets ul{
+  padding-bottom: 1em;
 }
 dt {
   display: block;
@@ -288,13 +289,17 @@ header nav a:hover {background-color: #ececec;}
  */
 
 /* Project-list */
+body.projects-index section {
+  
+}
 body.projects-index article {
   float: left;
   margin: 0 24px 24px 0;
 }
 body.projects-index article h1 {
-  font-size: 1.5em;
+  font-size: 1em;
   color: inherit;
+  width: 182px;
 }
 body.projects-index img {
   padding: 1px;
