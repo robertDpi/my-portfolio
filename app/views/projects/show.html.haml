@@ -25,7 +25,7 @@
     %dd= @project.year
   - if @project.live_site?
     %dt= "Live Site"
-    %dd= @project.live_site
+    %dd=link_to(@project.live_site, @project.live_site, :class => "external-link", :title => "Visit #{@project.title}'s live site")
 
 - @project.assets.each do |asset|
   - if asset.asset_file_name != nil

@@ -121,6 +121,10 @@ a:focus {
   position: relative;
   top: 1px;
 }
+a.external-link {
+  background: url(../images/vr_sprite.png) -12px -360px no-repeat transparent;
+  padding-left: 16px;
+}
 
 /* buttons */
 .btn {
