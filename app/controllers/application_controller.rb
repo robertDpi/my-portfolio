@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
 
   private
   def set_navigation
-    @project_list = Project.all
+    @project_list = Project.sorted
   end
-  #TODO: Code Review
 end
