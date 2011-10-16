@@ -138,9 +138,6 @@ a.external-link {
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
   border-radius: 0.25em;
-  -webkit-transition: 0.1s linear all;
-  -moz-transition: 0.1s linear all;
-  transition: 0.1s linear all;
   color: #fff;
   background-color: #1b8db2;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -291,6 +288,17 @@ header nav a:hover {background-color: #f7f7f7;}
 }
 .message ul {
   margin-bottom: 0;
+}
+
+/* Elements with transitions */
+a,
+.btn,
+header h1,
+header h2,
+body.projects-index img {
+  -webkit-transition: 0.3s linear all;
+  -moz-transition: 0.3s linear all;
+  transition: 0.3s linear all;
 }
 
 /* Section-specific styles *******************************************************************************************************************/
