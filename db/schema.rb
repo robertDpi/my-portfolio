@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111010224658) do
+ActiveRecord::Schema.define(:version => 20111023193656) do
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20111010224658) do
     t.string   "live_site"
     t.string   "year"
     t.integer  "order"
+    t.boolean  "is_published",       :default => true
   end
 
   create_table "users", :force => true do |t|
