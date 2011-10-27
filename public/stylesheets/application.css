@@ -335,6 +335,9 @@ body.projects-show dl dt {
 }
 
 /* About */
+body.pages-about section section {
+  clear: both;
+}
 body.pages-about img {
   float: left;
   margin: 0 1em 1em 0;
