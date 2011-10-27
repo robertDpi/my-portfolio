@@ -14,7 +14,7 @@
 /* Global Styles ***************************************************************************************************************************/
 
 body {
-  font-family: "Helvetica Neue", Helvetica, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Calibri, "Helvetica Neue", Helvetica, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #333333;
   font-size: 14px;
   background-color: #f4f4f4;
@@ -44,14 +44,16 @@ section section h1 {
 
 /* paragraphs */
 p {
-  margin-bottom: 24px;
+  margin-bottom: 1em;
   line-height: 1.5em;
   max-width: 600px;
+}
+p.last {
+  margin-bottom: 1.5em;
 }
 p strong {
 	color: #666;
 }
-* p:last-child {margin-bottom: 0;}
 strong {font-weight: bold;}
 
 ::-moz-selection {background: #FFF34C; color: #333333;}
@@ -64,7 +66,7 @@ ul, ol, dl {
 }
 ul ul,
 ol ol {
-  margin: 0 0 0 1em;
+  margin: 0 0 0 1.5em;
 }
 ul.bullets,
 ul.bullets ul{
@@ -124,8 +126,8 @@ a:focus {
   top: 1px;
 }
 a.external-link {
-  background: url(../images/vr_sprite.png) -12px -360px no-repeat transparent;
-  padding-left: 16px;
+  background: url(../images/vr_sprite.png) right -360px no-repeat transparent;
+  padding-right: 27px;
 }
 
 /* buttons */
@@ -263,6 +265,7 @@ header h1 {color: #322f31;}
 header h2 {color: #929497;}
 header :hover h1 {color: #FF3366;}
 header :hover h2 {color: #a2a4a6;}
+header nav li li a {color: #929497;}
 header nav a:hover {background-color: #f7f7f7;}
 
 /* Messages */

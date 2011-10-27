@@ -14,18 +14,18 @@
   - if @project.role?
     %dt= "Role"
     %dd= @project.role
+  - if @project.agency?
+    %dt= "Agency"
+    %dd= @project.agency  
   - if @project.technologies?
     %dt= "Technologies"
     %dd= @project.technologies
-  - if @project.agency?
-    %dt= "Agency"
-    %dd= @project.agency
   - if @project.year?
     %dt= "Year"
     %dd= @project.year
   - if @project.live_site?
     %dt= "Live Site"
-    %dd=link_to(@project.live_site, @project.live_site, :class => "external-link", :title => "Visit #{@project.title}'s live site")
+    %dd=link_to(@project.live_site, @project.live_site, :class => "external-link", :title => "Visit #{@project.title}'s live site", :target => "_blank")
 
 - @project.assets.each do |asset|
   - if asset.asset_file_name != nil
