@@ -6,7 +6,7 @@
     %meta{"charset" => "utf-8"}
     %meta{ :content => "Online Portfolio of Vero Rebagliatte", :name => "description" }
     %meta{ :content => "Vero Rebagliatte", :name => "author" }
-    = stylesheet_link_tag "application"
+    = stylesheet_link_tag "html5-reset", "application"
     = favicon_link_tag "favicon.png"
     = javascript_include_tag "modernizr-1.7.min"
     -# = javascript_include_tag :all
@@ -33,7 +33,7 @@
       %hgroup
         %a{:href=> "#{root_path}"}
           %h1= "Vero Rebagliatte"
-          %h2= "UI Designer & Developer"
+          %h2= "Designer & Developer"
       %nav
         %h1.hidden= "Main navigation"
         %ul

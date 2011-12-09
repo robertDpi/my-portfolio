@@ -1,12 +1,9 @@
 /*
     Name: Basic Stylesheet
     Description: My personal portfolio styles
-	Author: Veronica Rebagliatte
-	Author URI: http://rebagliatte.com
+    Author: Veronica Rebagliatte
+    Author URI: http://rebagliatte.com
 */
-
-/*  Imports */
-@import url("html5-reset.css");
 
 /* Pallete */
 /*magenta: #FF336A, dark magenta: #B2123D, cian: #149FCC, dark cian: #1B8DB2, yellow: #FFF34C, light gray: #F9F9F9*/
@@ -187,7 +184,7 @@ form textarea {
   font-size: 1em;
   clear: both;
   display: block;
-  width: 30em;
+  width: 410px;
   margin-bottom: 1em;
   padding: 0.5em;
   color: #555555;
@@ -362,14 +359,27 @@ body.pages-about .testimonials footer .position {
 .networks ul li a {
   display: block;
   background: url(../images/vr_sprite.png) top left no-repeat transparent;
-  line-height: 35px;
-  padding-left: 45px;
-  border: 1px solid #f1f1f1;
-  margin-bottom: 1em;
+  height: 35px;
+  width: 35px;
+  float: left;
+  border: 3px solid #ccc;
+  margin-right: 14px;
+}
+.networks ul li a span {
+  display: none;
 }
 .networks ul li a:hover {
-  border-color: #eaeaea;
-  background-color: #f9f9f9;
+  border-color: #149FCC;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.networks ul li a:active {
+  border-color: #1B8DB2;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  top: 0;
 }
 .networks ul li.linkedin a {background-position: 0 -35px;}
 .networks ul li.github a {background-position: 0 -70px;}
@@ -413,4 +423,12 @@ body.pages-about .testimonials footer .position {
     background: #f7f7f7;
     border-top: 1px solid #f4f4f4;
   }
+  form input,
+  form textarea {
+    width: 80%;
+  }
+  .networks ul li a {
+    margin-bottom: 14px;
+  }
 }
+

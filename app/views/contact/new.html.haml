@@ -15,27 +15,27 @@
   %h1= "Contact Information"
   %dl
     %dt= "Skype: "
-    %dd= link_to("veronica.rebagliatte", "skype:veronica.rebagliatte?call")
+    %dd= link_to("veronica.rebagliatte", "skype:veronica.rebagliatte?call", :title => 'Call me!')
     %dt= "Mail/IM: "
-    %dd= link_to("veronica@rebagliatte.com", "mailto:veronica@rebagliatte.com")
+    %dd= link_to("veronica@rebagliatte.com", "mailto:veronica@rebagliatte.com", :title => 'Send me an email')
     %dt= "vCard: "
-    %dd= link_to("Download my vCard", "/docs/Veronica Rebagliatte.vcf")
+    %dd= link_to("Download my vCard", "/docs/Veronica Rebagliatte.vcf", :title => 'Add me as a contact')
 
-%section.networks  
+%section.networks
   %h1= "Networks"
   %ul
-    %li.linkedin= link_to("LinkedIn", "http://uy.linkedin.com/in/rebagliatte")
-    %li.github= link_to("Github", "https://github.com/rebagliatte")
-    %li.delicious= link_to("Delicious", "http://www.delicious.com/rebagliatte")
-    %li.behance= link_to("Behance", "http://www.behance.net/rebagliatte")
-    %li.last-fm= link_to("LastFM", "http://www.lastfm.es/user/rebagliatte")
-    %li.google= link_to("Google+", "https://plus.google.com/102594733146864468374/posts")    
-    %li.facebook= link_to("Facebook", "http://www.facebook.com/rebagliatte")
-    %li.twitter= link_to("Twitter", "http://www.twitter.com/rebagliatte")
-    %li.flickr= link_to("Flickr", "http://www.flickr.com/photos/rebagliatte/")
-    %li.hidden= link_to("Zerply", "http://www.zerply.com/profile/rebagliatte")
-    %li.hidden= link_to("Dribble", "http://dribbble.com/rebagliatte")
-    %li.hidden= link_to("Chamber", "http://chamber.com/vernica-rebagliatte")
-    %li.hidden= link_to("YouTube", "http://www.youtube.com/vrebagliatte")
-    %li.hidden= link_to("Scribd", "http://www.scribd.com/rebagliatte")
-    %li.hidden= link_to("Cpluv", "http://www.computerlove.net/profile/users/rebagliatte")
+    %li.linkedin= link_to(content_tag(:span, 'LinkedIn'), "http://uy.linkedin.com/in/rebagliatte", :title => 'LinkedIn')
+    %li.github= link_to(content_tag(:span, 'Github'), "https://github.com/rebagliatte", :title => 'Github')
+    %li.delicious= link_to(content_tag(:span, 'Delicious'), "http://www.delicious.com/rebagliatte", :title => 'Delicious')
+    %li.behance= link_to(content_tag(:span, 'Behance'), "http://www.behance.net/rebagliatte", :title => 'Behance')
+    %li.google= link_to(content_tag(:span, 'Google+'), "https://plus.google.com/102594733146864468374/posts", :title => 'Google+')
+    %li.facebook= link_to(content_tag(:span, 'Facebook'), "http://www.facebook.com/rebagliatte", :title => 'Facebook')
+    %li.twitter= link_to(content_tag(:span, 'Twitter'), "http://www.twitter.com/rebagliatte", :title => 'Twitter')
+    %li.flickr= link_to(content_tag(:span, 'Flickr'), "http://www.flickr.com/photos/rebagliatte/", :title => 'Flickr')
+    %li.hidden= link_to(content_tag(:span, 'Zerply'), "http://www.zerply.com/profile/rebagliatte", :title => 'Zerply')
+    %li.hidden= link_to(content_tag(:span, 'Dribble'), "http://dribbble.com/rebagliatte", :title => 'Dribble')
+    %li.hidden= link_to(content_tag(:span, 'Chamber'), "http://chamber.com/vernica-rebagliatte", :title => 'Chamber`')
+    %li.hidden= link_to(content_tag(:span, 'YouTube'), "http://www.youtube.com/vrebagliatte", :title => 'YouTube')
+    %li.hidden= link_to(content_tag(:span, 'Scribd'), "http://www.scribd.com/rebagliatte", :title => 'Scribd')
+    %li.hidden= link_to(content_tag(:span, 'Cpluv'), "http://www.computerlove.net/profile/users/rebagliatte", :title => 'Cpluv')
+    %li.hidden= link_to(content_tag(:span, 'LastFM'), "http://www.lastfm.es/user/rebagliatte", :title => 'LastFM')
