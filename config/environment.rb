@@ -10,3 +10,5 @@ Haml::Template.options[:format] = :html5
 
 # Initialize the rails application
 PortfolioWebsite::Application.initialize!
+
+
